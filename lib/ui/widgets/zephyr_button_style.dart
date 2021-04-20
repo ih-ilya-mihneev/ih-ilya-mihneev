@@ -53,4 +53,19 @@ class ZephyrButtonStyle {
             theme.colors.black.withOpacity(Dimens.opacity10),
         this.colorPressedBorder =
             theme.colors.blue.withOpacity(Dimens.opacity50);
+
+  ZephyrButtonStyle.fromThemeText(ZephyrTheme theme,
+      {this.height = Dimens.generalButtonHeight,
+      this.elevationOpacity = Dimens.opacityNull,
+      this.borderRadius = Dimens.generalButtonCornerRadius})
+      : this.colorNormalBg = theme.colors.white,
+        this.colorDisabledBg = theme.colors.white,
+        this.colorPressedBg = theme.colors.white,
+        this.colorNormalText = theme.colors.blue,
+        this.colorDisabledText =
+            theme.colors.black.withOpacity(Dimens.opacity40),
+        this.colorPressedText = theme.colors.blue.withOpacity(Dimens.opacity50),
+        this.colorNormalBorder = null,
+        this.colorDisabledBorder = null,
+        this.colorPressedBorder = null;
 }

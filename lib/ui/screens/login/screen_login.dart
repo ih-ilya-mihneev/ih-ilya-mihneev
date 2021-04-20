@@ -25,17 +25,13 @@ class _LoginScreenState extends State<LoginScreen> {
     return bloc;
   }
 
-  bool isEnabledBtn = true;
+  bool isEnabledBtn = false;
 
   @override
   Widget build(BuildContext context) {
     _bloc ??= _initBloc(context);
 
-    final btnStyleElevated =
-        ZephyrButtonStyle.fromThemeElevated(Provider.of<ZephyrTheme>(context));
-
-    final btnStyleOutlined =
-        ZephyrButtonStyle.fromThemeOutlined(Provider.of<ZephyrTheme>(context));
+    ZephyrTheme zephyrTheme = Provider.of<ZephyrTheme>(context);
 
     void pressBtn() {
       setState(() {
@@ -44,27 +40,40 @@ class _LoginScreenState extends State<LoginScreen> {
     }
 
     ZephyrButton btnElevatedEnabled = ZephyrButton(
-      style: btnStyleElevated,
+      style: ZephyrButtonStyle.fromThemeElevated(zephyrTheme),
       text: 'Elevated Enabled>>>',
       onPressed: () => pressBtn(),
     );
 
     ZephyrButton btnElevatedDisabled = ZephyrButton(
-      style: btnStyleElevated,
+      style: ZephyrButtonStyle.fromThemeElevated(zephyrTheme),
       text: 'Elevated Disabled>>>',
       enabled: isEnabledBtn,
       onPressed: () => pressBtn(),
     );
 
     ZephyrButton btnOutlinedEnabled = ZephyrButton(
-      style: btnStyleOutlined,
+      style: ZephyrButtonStyle.fromThemeOutlined(zephyrTheme),
       text: 'Outlined Enabled>>>',
       onPressed: () => pressBtn(),
     );
 
     ZephyrButton btnOutlinedDisabled = ZephyrButton(
-      style: btnStyleOutlined,
+      style: ZephyrButtonStyle.fromThemeOutlined(zephyrTheme),
       text: 'Outlined Disabled>>>',
+      enabled: isEnabledBtn,
+      onPressed: () => pressBtn(),
+    );
+
+    ZephyrButton btnTextEnabled = ZephyrButton(
+      style: ZephyrButtonStyle.fromThemeText(zephyrTheme),
+      text: 'Text btn Enabled>>>',
+      onPressed: () => pressBtn(),
+    );
+
+    ZephyrButton btnTextDisabled = ZephyrButton(
+      style: ZephyrButtonStyle.fromThemeText(zephyrTheme),
+      text: 'Text btn Disabled>>>',
       enabled: isEnabledBtn,
       onPressed: () => pressBtn(),
     );
@@ -86,6 +95,9 @@ class _LoginScreenState extends State<LoginScreen> {
               btnOutlinedEnabled,
               SizedBox(height: 10),
               btnOutlinedDisabled,
+              SizedBox(height: 10),
+              btnTextEnabled,
+              btnTextDisabled,
               ElevatedButton(
                 onPressed: () {},
                 child: Text('Default style enabled'),
