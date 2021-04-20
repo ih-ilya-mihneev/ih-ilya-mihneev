@@ -47,11 +47,61 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `qwe`
+  String get qwe {
+    return Intl.message(
+      'qwe',
+      name: 'qwe',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Zephyr`
   String get appName {
     return Intl.message(
       'Zephyr',
       name: 'appName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Remember Me`
+  String get rememberMe {
+    return Intl.message(
+      'Remember Me',
+      name: 'rememberMe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Login`
+  String get login {
+    return Intl.message(
+      'Login',
+      name: 'login',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password`
+  String get password {
+    return Intl.message(
+      'Password',
+      name: 'password',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email`
+  String get email {
+    return Intl.message(
+      'Email',
+      name: 'email',
       desc: '',
       args: [],
     );

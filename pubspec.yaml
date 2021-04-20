@@ -49,6 +49,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/
+    - assets/logo.png
+    - assets/visibility.png
   fonts:
     - family: Lato
       fonts:
