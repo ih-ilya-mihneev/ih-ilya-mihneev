@@ -1,4 +1,8 @@
 {
   "@@locale": "en",
-  "appName": "Zephyr"
+  "appName": "Zephyr",
+  "rememberMe": "Remember Me",
+  "login": "Login",
+  "password": "Password",
+  "email": "Email"
 }

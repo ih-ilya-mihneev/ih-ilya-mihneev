@@ -63,6 +63,10 @@ class Dimens {
   static const double grid80 = 80;
   static const double grid120 = 120;
 
+  // Widget border radiuses
+  static const double borderRadius4 = 4;
+  static const double borderRadius18 = 18;
+
   // Button sizes
   static const double generalButtonHeight = 50;
   static const double generalButtonCornerRadius = 4;
