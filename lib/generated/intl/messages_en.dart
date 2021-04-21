@@ -25,7 +25,6 @@ class MessageLookup extends MessageLookupByLibrary {
     "email" : MessageLookupByLibrary.simpleMessage("Email"),
     "login" : MessageLookupByLibrary.simpleMessage("Login"),
     "password" : MessageLookupByLibrary.simpleMessage("Password"),
-    "qwe" : MessageLookupByLibrary.simpleMessage("qwe"),
     "rememberMe" : MessageLookupByLibrary.simpleMessage("Remember Me")
   };
 }

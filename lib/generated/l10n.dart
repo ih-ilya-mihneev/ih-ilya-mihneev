@@ -47,16 +47,6 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `qwe`
-  String get qwe {
-    return Intl.message(
-      'qwe',
-      name: 'qwe',
-      desc: '',
-      args: [],
-    );
-  }
-
   /// `Zephyr`
   String get appName {
     return Intl.message(

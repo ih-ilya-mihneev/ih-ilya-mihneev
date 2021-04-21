@@ -43,4 +43,4 @@ ZephyrColors _defaultColors() => ZephyrColors(
     gray2: Color(0x61000000),
     gray3: Color(0x33000000),
     white: Color(0xFFFFFFFF),
-    lightBackground: Color.fromRGBO(246, 246, 246, 1));
+    lightBackground: Color(0xF6F6F6F6));
