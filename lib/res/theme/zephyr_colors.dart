@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ZephyrColors {
-  @required final Color blue;
+  @required
+  final Color blue;
   final Color orange;
   final Color green;
   final Color red;
@@ -10,17 +11,19 @@ class ZephyrColors {
   final Color gray2;
   final Color gray3;
   final Color white;
+  final Color lightBackground;
 
   ZephyrColors(
       {required this.blue,
-        required this.orange,
-        required this.green,
-        required this.red,
-        required this.black,
-        required this.gray1,
-        required this.gray2,
-        required this.gray3,
-        required this.white});
+      required this.orange,
+      required this.green,
+      required this.red,
+      required this.black,
+      required this.gray1,
+      required this.gray2,
+      required this.gray3,
+      required this.white,
+      required this.lightBackground});
 
   factory ZephyrColors.defaultColors() {
     return _defaultColors();
@@ -39,4 +42,5 @@ ZephyrColors _defaultColors() => ZephyrColors(
     gray1: Color(0xA6000000),
     gray2: Color(0x61000000),
     gray3: Color(0x33000000),
-    white: Color(0xFFFFFFFF));
+    white: Color(0xFFFFFFFF),
+    lightBackground: Color.fromRGBO(246, 246, 246, 1));

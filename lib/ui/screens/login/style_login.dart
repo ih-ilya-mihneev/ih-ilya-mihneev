@@ -9,11 +9,15 @@ class LoginStyle {
   final TextStyle titleTextStyle;
   final TextStyle rememberMeTextStyle;
   final TextStyle loginButtonTextStyle;
-  final double blurRadius = 6.0;
-  final Offset shadowOffset = Offset(0.0, 3.5);
+  final BoxShadow loginContainerBoxShadow;
 
   LoginStyle.fromTheme(ZephyrTheme theme)
-      : backgroundColor = const Color.fromRGBO(246, 246, 246, 1),
+      : loginContainerBoxShadow = BoxShadow(
+          offset: Offset(0.0, 3.5),
+          color: Colors.grey,
+          blurRadius: 6.0,
+        ),
+        backgroundColor = theme.colors.lightBackground,
         loginButtonColor = const Color.fromRGBO(0, 113, 188, 1),
         captionTextStyle = theme.textStyles.h2.get(color: theme.colors.red),
         textFieldTextStyle = theme.textStyles.b1.get(color: theme.colors.black),

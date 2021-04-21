@@ -49,10 +49,8 @@ class Dimens {
   static const double grid32 = 32;
   static const double grid36 = 36;
   static const double grid40 = 40;
-  static const double grid42 = 42;
   static const double grid44 = 44;
   static const double grid48 = 48;
-  static const double grid50 = 50;
   static const double grid52 = 52;
   static const double grid56 = 56;
   static const double grid60 = 60;
@@ -65,5 +63,5 @@ class Dimens {
 
   // Widget border radiuses
   static const double borderRadius4 = 4;
-  static const double borderRadius19 = 19;
+  static const double borderRadius18 = 18;
 }

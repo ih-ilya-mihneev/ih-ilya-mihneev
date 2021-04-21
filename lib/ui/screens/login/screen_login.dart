@@ -31,10 +31,6 @@ class _LoginScreenState extends State<LoginScreen> {
     });
   }
 
-  void _login() {
-    _bloc?.loginClick();
-  }
-
   LoginBLoC _initBloc(BuildContext context) {
     var bloc = Provider.of<LoginBLoC>(context)..init();
     return bloc;
@@ -44,16 +40,10 @@ class _LoginScreenState extends State<LoginScreen> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(Dimens.borderRadius19),
-          topRight: Radius.circular(Dimens.borderRadius19),
+          topLeft: Radius.circular(Dimens.borderRadius18),
+          topRight: Radius.circular(Dimens.borderRadius18),
         ),
-        boxShadow: [
-          BoxShadow(
-            offset: widget._style.shadowOffset,
-            color: Colors.grey,
-            blurRadius: widget._style.blurRadius,
-          ),
-        ],
+        boxShadow: [widget._style.loginContainerBoxShadow],
         color: Colors.white,
       ),
       child: Padding(
@@ -76,7 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: Dimens.grid32,
               ),
               Container(
-                height: Dimens.grid50,
+                height: Dimens.grid48,
                 child: TextField(
                   keyboardType: TextInputType.emailAddress,
                   style: widget._style.textFieldTextStyle,
@@ -94,7 +84,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: Dimens.grid24,
               ),
               Container(
-                height: Dimens.grid50,
+                height: Dimens.grid48,
                 child: TextFormField(
                   style: widget._style.textFieldTextStyle,
                   decoration: InputDecoration(
@@ -138,20 +128,20 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Container(
                 width: double.infinity,
-                height: Dimens.grid50,
+                height: Dimens.grid48,
                 decoration: BoxDecoration(
                   color: widget._style.loginButtonColor,
                   borderRadius: BorderRadius.circular(Dimens.borderRadius4),
                 ),
                 child: ElevatedButton(
-                  onPressed: _login,
+                  onPressed: _bloc?.loginClick,
                   child: Text(
                     S.of(context).login,
                     style: widget._style.loginButtonTextStyle,
                   ),
                 ),
               ),
-              SizedBox(height: Dimens.grid42)
+              SizedBox(height: Dimens.grid44)
             ],
           ),
         ),
